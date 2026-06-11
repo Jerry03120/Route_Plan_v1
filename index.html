@@ -4,61 +4,217 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Select Route Plan</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      max-width: 720px;
-      margin: 60px auto;
-      padding: 20px;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 24px;
       line-height: 1.6;
+      background: #f6f7f9;
+      color: #222;
+    }
+
+    header {
+      margin-bottom: 28px;
     }
 
     h1 {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      font-size: 30px;
     }
 
-    p {
+    .subtitle {
+      color: #666;
+      margin-top: 0;
+    }
+
+    .section {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
       margin-bottom: 16px;
     }
 
-    select,
-    button {
-      font-size: 16px;
-      padding: 10px;
-      margin-top: 10px;
+    .section-title {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .badge-current {
+      background: #e8f1ff;
+      color: #1557b0;
+    }
+
+    .badge-track {
+      background: #eaf8ef;
+      color: #147a3e;
+    }
+
+    .description {
+      margin-top: 0;
+      color: #666;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 12px;
     }
 
     button {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 16px;
       cursor: pointer;
+      background: #fff;
+      text-align: left;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: #888;
+    }
+
+    .btn-title {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .btn-sub {
+      display: block;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .current button:hover {
+      background: #f2f7ff;
+    }
+
+    .track button:hover {
+      background: #f1fbf5;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
-  <h1>Select Route Plan HTML</h1>
-  <p>Please select the version you want to open.</p>
+  <header>
+    <h1>Select Route Plan HTML</h1>
+    <p class="subtitle">
+      Select the route plan version you want to open.
+    </p>
+  </header>
 
-  <select id="htmlSelect">
-    <option value="">-- Please select --</option>
-    <option value="fieldwork_V1_DAY_SPLIT_v24.html">V1 DAY SPLIT_v24</option>
-    <option value="fieldwork_V2_DAY_SPLIT_v24.html">V2 DAY SPLIT_v24</option>
-    <option value="fieldwork_V3_DAY_SPLIT_v24.html">V3 DAY SPLIT_v24</option>
-    <option value="fieldwork_V4_DAY_SPLIT_v24.html">V4 DAY SPLIT_v24</option>
-  </select>
+  <!-- v24: Current Code -->
+  <section class="section current">
+    <div class="section-header">
+      <h2 class="section-title">Current Code Version</h2>
+      <span class="badge badge-current">v24</span>
+    </div>
 
-  <br />
+    <p class="description">
+      This is the current base version. It uses the existing DAY SPLIT HTML without the Route Track feature.
+    </p>
 
-  <button onclick="openSelected()">Open</button>
+    <div class="button-grid">
+      <button onclick="openFile('fieldwork_V1_DAY_SPLIT_v24.html')">
+        <span class="btn-title">V1 DAY SPLIT</span>
+        <span class="btn-sub">Current Code · v24</span>
+      </button>
+
+      <button onclick="openFile('fieldwork_V2_DAY_SPLIT_v24.html')">
+        <span class="btn-title">V2 DAY SPLIT</span>
+        <span class="btn-sub">Current Code · v24</span>
+      </button>
+
+      <button onclick="openFile('fieldwork_V3_DAY_SPLIT_v24.html')">
+        <span class="btn-title">V3 DAY SPLIT</span>
+        <span class="btn-sub">Current Code · v24</span>
+      </button>
+
+      <button onclick="openFile('fieldwork_V4_DAY_SPLIT_v24.html')">
+        <span class="btn-title">V4 DAY SPLIT</span>
+        <span class="btn-sub">Current Code · v24</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- v25: Route Track -->
+  <section class="section track">
+    <div class="section-header">
+      <h2 class="section-title">Route Track Version</h2>
+      <span class="badge badge-track">v25</span>
+    </div>
+
+    <p class="description">
+      This version includes the Route Track feature. Use these files to review Route Track behavior for each V1–V4 plan.
+    </p>
+
+    <div class="button-grid">
+      <button onclick="openFile('fieldwork_V1_DAY_SPLIT_v25.html')">
+        <span class="btn-title">V1 DAY SPLIT</span>
+        <span class="btn-sub">Route Track · v25</span>
+      </button>
+
+      <button onclick="openFile('fieldwork_V2_DAY_SPLIT_v25.html')">
+        <span class="btn-title">V2 DAY SPLIT</span>
+        <span class="btn-sub">Route Track · v25</span>
+      </button>
+
+      <button onclick="openFile('fieldwork_V3_DAY_SPLIT_v25.html')">
+        <span class="btn-title">V3 DAY SPLIT</span>
+        <span class="btn-sub">Route Track · v25</span>
+      </button>
+
+      <button onclick="openFile('fieldwork_V4_DAY_SPLIT_v25.html')">
+        <span class="btn-title">V4 DAY SPLIT</span>
+        <span class="btn-sub">Route Track · v25</span>
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    v24 = Current Code · v25 = Route Track
+  </footer>
 
   <script>
-    function openSelected() {
-      const file = document.getElementById("htmlSelect").value;
-
-      if (!file) {
-        alert("Please select an HTML file.");
-        return;
-      }
-
-      window.location.href = file;
+    function openFile(fileName) {
+      window.location.href = fileName;
     }
   </script>
 </body>
