@@ -30,8 +30,22 @@ These files include the Route Track feature.
 
 ---
 
+## DAY2 Route Optimized Versions
+
+These files include DAY2-only route optimization.
+
+| Version | Description                         | Open                                        |
+| ------- | ----------------------------------- | ------------------------------------------- |
+| V1      | V1 DAY SPLIT · DAY2 Route Optimized | [Open v26](fieldwork_V1_DAY_SPLIT_v26.html) |
+| V2      | V2 DAY SPLIT · DAY2 Route Optimized | [Open v26](fieldwork_V2_DAY_SPLIT_v26.html) |
+| V3      | V3 DAY SPLIT · DAY2 Route Optimized | [Open v26](fieldwork_V3_DAY_SPLIT_v26.html) |
+| V4      | V4 DAY SPLIT · DAY2 Route Optimized | [Open v26](fieldwork_V4_DAY_SPLIT_v26.html) |
+
+---
+
 ## Version Guide
 
 * **v24** = Current Code
 * **v25** = Route Track
+* **v26** = DAY2 Route Optimized
 * **V1–V4** = Route Plan Versions
