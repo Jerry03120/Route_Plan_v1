@@ -1,221 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Select Route Plan</title>
+<!-- v26: DAY2 Route Refined -->
+<section class="section refined">
+  <div class="section-header">
+    <h2 class="section-title">DAY2 Route Refined Version</h2>
+    <span class="badge badge-refined">v26</span>
+  </div>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <p class="description">
+    This version includes DAY2-only route refinements. It is intended for reviewing improved DAY2 route flow, but it does not mean the route is fully optimized.
+  </p>
 
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 24px;
-      line-height: 1.6;
-      background: #f6f7f9;
-      color: #222;
-    }
+  <div class="button-grid">
+    <button onclick="openFile('fieldwork_V1_DAY_SPLIT_v26.html')">
+      <span class="btn-title">V1 DAY SPLIT</span>
+      <span class="btn-sub">DAY2 Route Refined · v26</span>
+    </button>
 
-    header {
-      margin-bottom: 28px;
-    }
+    <button onclick="openFile('fieldwork_V2_DAY_SPLIT_v26.html')">
+      <span class="btn-title">V2 DAY SPLIT</span>
+      <span class="btn-sub">DAY2 Route Refined · v26</span>
+    </button>
 
-    h1 {
-      margin-bottom: 8px;
-      font-size: 30px;
-    }
+    <button onclick="openFile('fieldwork_V3_DAY_SPLIT_v26.html')">
+      <span class="btn-title">V3 DAY SPLIT</span>
+      <span class="btn-sub">DAY2 Route Refined · v26</span>
+    </button>
 
-    .subtitle {
-      color: #666;
-      margin-top: 0;
-    }
-
-    .section {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 14px;
-      padding: 22px;
-      margin-bottom: 22px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      margin: 0;
-      font-size: 22px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    .badge-current {
-      background: #e8f1ff;
-      color: #1557b0;
-    }
-
-    .badge-track {
-      background: #eaf8ef;
-      color: #147a3e;
-    }
-
-    .description {
-      margin-top: 0;
-      color: #666;
-    }
-
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 12px;
-    }
-
-    button {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 14px 16px;
-      font-size: 16px;
-      cursor: pointer;
-      background: #fff;
-      text-align: left;
-      transition: 0.2s ease;
-    }
-
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      border-color: #888;
-    }
-
-    .btn-title {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
-
-    .btn-sub {
-      display: block;
-      font-size: 13px;
-      color: #666;
-    }
-
-    .current button:hover {
-      background: #f2f7ff;
-    }
-
-    .track button:hover {
-      background: #f1fbf5;
-    }
-
-    footer {
-      margin-top: 24px;
-      font-size: 13px;
-      color: #777;
-      text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>Select Route Plan HTML</h1>
-    <p class="subtitle">
-      Select the route plan version you want to open.
-    </p>
-  </header>
-
-  <!-- v24: Current Code -->
-  <section class="section current">
-    <div class="section-header">
-      <h2 class="section-title">Current Code Version</h2>
-      <span class="badge badge-current">v24</span>
-    </div>
-
-    <p class="description">
-      This is the current base version. It uses the existing DAY SPLIT HTML without the Route Track feature.
-    </p>
-
-    <div class="button-grid">
-      <button onclick="openFile('fieldwork_V1_DAY_SPLIT_v24.html')">
-        <span class="btn-title">V1 DAY SPLIT</span>
-        <span class="btn-sub">Current Code · v24</span>
-      </button>
-
-      <button onclick="openFile('fieldwork_V2_DAY_SPLIT_v24.html')">
-        <span class="btn-title">V2 DAY SPLIT</span>
-        <span class="btn-sub">Current Code · v24</span>
-      </button>
-
-      <button onclick="openFile('fieldwork_V3_DAY_SPLIT_v24.html')">
-        <span class="btn-title">V3 DAY SPLIT</span>
-        <span class="btn-sub">Current Code · v24</span>
-      </button>
-
-      <button onclick="openFile('fieldwork_V4_DAY_SPLIT_v24.html')">
-        <span class="btn-title">V4 DAY SPLIT</span>
-        <span class="btn-sub">Current Code · v24</span>
-      </button>
-    </div>
-  </section>
-
-  <!-- v25: Route Track -->
-  <section class="section track">
-    <div class="section-header">
-      <h2 class="section-title">Route Track Version</h2>
-      <span class="badge badge-track">v25</span>
-    </div>
-
-    <p class="description">
-      This version includes the Route Track feature. Use these files to review Route Track behavior for each V1–V4 plan.
-    </p>
-
-    <div class="button-grid">
-      <button onclick="openFile('fieldwork_V1_DAY_SPLIT_v25.html')">
-        <span class="btn-title">V1 DAY SPLIT</span>
-        <span class="btn-sub">Route Track · v25</span>
-      </button>
-
-      <button onclick="openFile('fieldwork_V2_DAY_SPLIT_v25.html')">
-        <span class="btn-title">V2 DAY SPLIT</span>
-        <span class="btn-sub">Route Track · v25</span>
-      </button>
-
-      <button onclick="openFile('fieldwork_V3_DAY_SPLIT_v25.html')">
-        <span class="btn-title">V3 DAY SPLIT</span>
-        <span class="btn-sub">Route Track · v25</span>
-      </button>
-
-      <button onclick="openFile('fieldwork_V4_DAY_SPLIT_v25.html')">
-        <span class="btn-title">V4 DAY SPLIT</span>
-        <span class="btn-sub">Route Track · v25</span>
-      </button>
-    </div>
-  </section>
-
-  <footer>
-    v24 = Current Code · v25 = Route Track
-  </footer>
-
-  <script>
-    function openFile(fileName) {
-      window.location.href = fileName;
-    }
-  </script>
-</body>
-</html>
+    <button onclick="openFile('fieldwork_V4_DAY_SPLIT_v26.html')">
+      <span class="btn-title">V4 DAY SPLIT</span>
+      <span class="btn-sub">DAY2 Route Refined · v26</span>
+    </button>
+  </div>
+</section>
