@@ -30,16 +30,16 @@ These files include the Route Track feature.
 
 ---
 
-## DAY2 Route Optimized Versions
+## DAY2 Route Adjusted Versions
 
-These files include DAY2-only route optimization.
+These files include DAY2-only route adjustments. They are intended for reviewing adjusted DAY2 route flow, but they do not mean the routes are fully optimized.
 
-| Version | Description                         | Open                                        |
-| ------- | ----------------------------------- | ------------------------------------------- |
-| V1      | V1 DAY SPLIT · DAY2 Route Optimized | [Open v26](fieldwork_V1_DAY_SPLIT_v26.html) |
-| V2      | V2 DAY SPLIT · DAY2 Route Optimized | [Open v26](fieldwork_V2_DAY_SPLIT_v26.html) |
-| V3      | V3 DAY SPLIT · DAY2 Route Optimized | [Open v26](fieldwork_V3_DAY_SPLIT_v26.html) |
-| V4      | V4 DAY SPLIT · DAY2 Route Optimized | [Open v26](fieldwork_V4_DAY_SPLIT_v26.html) |
+| Version | Description                      | Open                                        |
+| ------- | -------------------------------- | ------------------------------------------- |
+| V1      | V1 DAY SPLIT · DAY2 Route Adjusted | [Open v26](fieldwork_V1_DAY_SPLIT_v26.html) |
+| V2      | V2 DAY SPLIT · DAY2 Route Adjusted | [Open v26](fieldwork_V2_DAY_SPLIT_v26.html) |
+| V3      | V3 DAY SPLIT · DAY2 Route Adjusted | [Open v26](fieldwork_V3_DAY_SPLIT_v26.html) |
+| V4      | V4 DAY SPLIT · DAY2 Route Adjusted | [Open v26](fieldwork_V4_DAY_SPLIT_v26.html) |
 
 ---
 
@@ -47,5 +47,5 @@ These files include DAY2-only route optimization.
 
 * **v24** = Current Code
 * **v25** = Route Track
-* **v26** = DAY2 Route Optimized
+* **v26** = DAY2 Route Adjusted, not fully optimized
 * **V1–V4** = Route Plan Versions
